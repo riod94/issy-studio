@@ -14,14 +14,15 @@ const facilities = [
 	"rental-towel",
 ] as const;
 
-export default function LocationDetailPage({
-	params,
-}: {
-	params: { slug: string };
-}) {
+interface PageProps {
+	params: Promise<{ slug: string }>;
+}
+
+export default async function LocationDetailPage({ params }: PageProps) {
+	const slug = (await params).slug;
 	// This would normally fetch based on the Slug
 	const location = {
-		name: unslugify(params.slug) || "Sedayu Kelapa Gading",
+		name: unslugify(slug) || "Sedayu Kelapa Gading",
 		address:
 			"Jl. Sedayu Boulevard Raya, RT.3/RW.9, Cakung Bar., Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13910",
 		images: ["/placeholder.svg?height=600&width=1200"],

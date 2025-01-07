@@ -19,11 +19,12 @@ const reviews = [
 	// Add more reviews...
 ];
 
-export default function ClassDetailPage({
-	params,
-}: {
-	params: { slug: string };
-}) {
+interface PageProps {
+	params: Promise<{ slug: string }>;
+}
+
+export default async function ClassDetailPage({ params }: PageProps) {
+	const slug = (await params).slug;
 	return (
 		<main className="flex-1">
 			{/* Breadcrumb */}
@@ -33,7 +34,7 @@ export default function ClassDetailPage({
 						Classes
 					</Link>
 					<ChevronRight className="w-4 h-4 mx-2" />
-					<span>{unslugify(params.slug)}</span>
+					<span>{unslugify(slug)}</span>
 				</div>
 			</div>
 
