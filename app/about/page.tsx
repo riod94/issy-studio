@@ -31,7 +31,7 @@ export default function AboutPage() {
 
 						<div className="max-w-3xl mx-auto text-center mb-24">
 							<p className="text-2xl md:text-3xl lg:text-4xl text-primary leading-relaxed">
-								Dance isn't just about physical movement; it's a path to
+								Dance isn&apos;t just about physical movement; it&apos;s a path to
 								discovering your inner elegance. Issy Studio helps you
 								find a healthier and happier version of yourself
 								blossoming like a beautiful flower.

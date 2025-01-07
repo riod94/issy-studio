@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { ClassBadge } from "@/components/class-badge";
 import { StarRating } from "@/components/star-rating";
+import { unslugify } from "@/utils";
 
 const reviews = [
 	{
@@ -32,7 +33,7 @@ export default function ClassDetailPage({
 						Classes
 					</Link>
 					<ChevronRight className="w-4 h-4 mx-2" />
-					<span>Reformer Class - Strong Core</span>
+					<span>{unslugify(params.slug)}</span>
 				</div>
 			</div>
 
@@ -57,10 +58,10 @@ export default function ClassDetailPage({
 									CLASS DETAILS
 								</h2>
 								<p className="text-gray-600">
-									Enhance your Pilates workout with the 'Strong Core'.
-									This class will concentrate on core and body strength
-									training. These exercises will increase overall body
-									strength, reducing the risk of injury.
+									Enhance your Pilates workout with the &lsquo;Strong
+									Core&rsquo;. This class will concentrate on core and
+									body strength training. These exercises will increase
+									overall body strength, reducing the risk of injury.
 								</p>
 							</section>
 

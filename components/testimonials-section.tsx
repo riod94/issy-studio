@@ -20,7 +20,7 @@ export function TestimonialsSection() {
               </div>
               <blockquote className="flex-1 mb-4">
                 <p className="text-gray-500">
-                  "Amazing instructors and great atmosphere. I've learned so much since joining Issy Studio!"
+                  &quot;Amazing instructors and great atmosphere. I&apos;ve learned so much since joining Issy Studio!&quot;
                 </p>
               </blockquote>
               <div className="flex items-center space-x-4">

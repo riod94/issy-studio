@@ -19,7 +19,7 @@ export function FeaturesSection() {
             Why Choose Issy Studio?
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            At Issy Studio, we're committed to providing the best dance education and experience for our students.
+            At Issy Studio, we&apos;re committed to providing the best dance education and experience for our students.
           </p>
         </div>
 

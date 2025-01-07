@@ -3,6 +3,7 @@ import { FacilityIcon } from "@/components/facility-icon";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { unslugify } from "@/utils";
 
 const facilities = [
 	"toilet",
@@ -20,7 +21,7 @@ export default function LocationDetailPage({
 }) {
 	// This would normally fetch based on the Slug
 	const location = {
-		name: "Sedayu Kelapa Gading",
+		name: unslugify(params.slug) || "Sedayu Kelapa Gading",
 		address:
 			"Jl. Sedayu Boulevard Raya, RT.3/RW.9, Cakung Bar., Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13910",
 		images: ["/placeholder.svg?height=600&width=1200"],
@@ -29,7 +30,7 @@ export default function LocationDetailPage({
 	return (
 		<DefaultSection>
 			{/* Breadcrumb */}
-			<div className="mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="mx-auto px-4 sm:px-6 lg:px-8 my-6">
 				<div className="flex items-center text-sm text-white">
 					<Link href="/location" className="hover:text-secondary">
 						Locations
@@ -40,7 +41,7 @@ export default function LocationDetailPage({
 			</div>
 
 			{/* Hero Image */}
-			<div className="mx-auto px-4 sm:px-6 lg:px-8 relative h-[400px] md:h-[600px]">
+			<div className="mx-4 sm:mx-6 lg:mx-8 relative h-[400px] md:h-[600px]">
 				<Image
 					src={location.images[0]}
 					alt={location.name}
